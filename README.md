@@ -4,7 +4,7 @@ API_KEY=your-secure-api-key
 # Config your database url :
 DATABASE_URL=
 
-# Migrate to feed your Database
+# Migrate to feed your Database (can skip)
 php bin/console doctrine:migrations:migrate
 
 # Start the server backend :
@@ -25,6 +25,7 @@ npm start
 - Better UI
 - Add translation for later can be able to switch fr/en
 - Store every fees in database so we can easily change them
+- Store request for Vehicule and Bid in database
 
 # To test in Prod :
 https://progi.areauniverse.fr/bid-calculation
