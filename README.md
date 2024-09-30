@@ -25,4 +25,6 @@ npm start
 - Better UI
 - Add translation for later can be able to switch fr/en
 - Store every fees in database so we can easily change them
-- Deploy on prod
+
+# To test in Prod :
+https://progi.areauniverse.fr/bid-calculation
