@@ -11,11 +11,10 @@ php bin/console doctrine:migrations:migrate
 symfony server:start
 
 # Start the frontend dev :
-npm run dev
+npm run dev or npm run watch
 
 # Start the frontend prod :
 npm run build
-npm start
 
 # How to use :
 - Frontend bid form and calculation -> /bid-calculation
