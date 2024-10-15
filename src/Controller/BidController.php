@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BidController extends AbstractController
 {
-    #[Route('/bid-calculation', name: 'bid_calculation')]
+    #[Route('/', name: 'bid_calculation')]
     public function index(): Response
     {
         return $this->render('bid_calculation/index.html.twig');

@@ -1,0 +1,53 @@
+<div>
+    <h2>Bid Calculation Tool</h2>
+
+    <div>
+        <label for="basePrice">Base Price:</label>
+        <input
+                type="number"
+                v-model="price"
+                placeholder="Enter vehicle base price"
+                @input="onPriceInput"
+        />
+
+        <label for="vehicleType">Vehicle Type:</label>
+        <select v-model="type">
+            <option value="common">Common</option>
+            <option value="luxury">Luxury</option>
+        </select>
+    </div>
+
+    <div v-if="error && priceTouched" class="error">{{ error }}</div>
+
+    <div v-if="totalFees !== null && !error">
+        <h3>Calculated Fees</h3>
+        <table>
+            <tbody>
+            <tr>
+                <td>Basic Fee:</td>
+                <td>{{ fees.basicFee }} $</td>
+            </tr>
+            <tr>
+                <td>Special Fee:</td>
+                <td>{{ fees.specialFee }} $</td>
+            </tr>
+            <tr>
+                <td>Association Fee:</td>
+                <td>{{ fees.associationFee }} $</td>
+            </tr>
+            <tr>
+                <td>Storage Fee:</td>
+                <td>{{ fees.storageFee }} $</td>
+            </tr>
+            <tr>
+                <td><strong>Total Fees:</strong></td>
+                <td><strong>{{ totalFees }} $</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Total Price:</strong></td>
+                <td><strong>{{ totalFees + price}} $</strong></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

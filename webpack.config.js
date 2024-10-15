@@ -10,6 +10,7 @@ dotenv.config({ path: envFile });
 if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
 }
+
 Encore
     .enableVueLoader()
     .setOutputPath('public/build/')
@@ -29,5 +30,10 @@ Encore
     .addPlugin(new webpack.DefinePlugin({
         'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
     }));
+
+Encore.addRule({
+    test: /\.html$/,
+    use: ['html-loader'],
+});
 
 module.exports = Encore.getWebpackConfig();
