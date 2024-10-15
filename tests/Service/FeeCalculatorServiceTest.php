@@ -2,7 +2,7 @@
 
 namespace App\Tests\Service;
 
-use App\Service\BidCalculationService;
+use App\Service\Fees\BidCalculationService;
 use PHPUnit\Framework\TestCase;
 
 class FeeCalculatorServiceTest extends TestCase
