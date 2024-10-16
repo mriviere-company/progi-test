@@ -27,4 +27,4 @@ npm run build
 - Store request for Vehicule and Bid in database
 
 # To test in Prod :
-https://progi.areauniverse.fr/bid-calculation
+https://progi.areauniverse.fr
